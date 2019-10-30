@@ -17,14 +17,8 @@ module.exports = function(grunt){
             },
             src: ['css/style.css']
           },
-          lax: {
-            options: {
-              import: false
-            },
-            src: ['css/style.css']
-          }
-      },
-      cssmin: {
+        },
+        cssmin: {
           target: {
               files: [{
                   expand: true,
@@ -33,7 +27,14 @@ module.exports = function(grunt){
                   ext: '.min.css'
               }]
           }
-      },
+        },
+        uglify:{
+          my_target:{
+              files: {
+                  'js/script.min.js':['js/script.js']
+              }
+          }
+        },
         watch: {
             files: ['<%= jshint.files %>', 'css/style.css'],
             tasks: ['jshint', 'csslint']
@@ -44,10 +45,12 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // register tasks
     grunt.registerTask('checkJS', ['jshint']);
     grunt.registerTask('checkCSS',['csslint']);
     grunt.registerTask('minifyCSS', ['cssmin']);
+    grunt.registerTask('minifyAll', ['cssmin'],['uglify']);
     grunt.registerTask('runWatch', ['watch']);
 };
