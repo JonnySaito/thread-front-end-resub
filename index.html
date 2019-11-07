@@ -13,35 +13,16 @@
 <body>
     <!-- SOPHIE'S BEAUTIFUL NAV BAR WITH DROPDOWN MENU -->
     <nav class="navbar navbar-light bg-thread fixed">
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon white"></span>
-    </button> -->
     <a id="titleBtn" class="navbar-brand mx-auto text-white shopTitle" href="#">Thread</a>
-
     <div id="logInOutBox">
         <button id="registerBtn" class="mr-1 btn btn-light d-none" type="button" name="button">Register</button>
         <button id="loginBtn" class="btn btn-light d-none" type="button" name="button" >Login</button>
         <button id="logoutBtn" class="btn btn-light d-none" type="button" name="button">Logout</button>
     </div>
-    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-    <li class="nav-item active mx-auto">
-    <a class="nav-link" href="#">TOPS</a>
-</li>
-<li class="nav-item mx-auto">
-<a class="nav-link" href="#">BOTTOMS</a>
-</li>
-<li class="nav-item mx-auto">
-<a class="nav-link" href="#">OUTERWEAR</a>
-</li>
-<li class="nav-item mx-auto">
-<a class="nav-link" href="#">OTHER</a>
-</li>
-</ul>
-</div> -->
+
 </nav>
 
-<!-- SOPHIE'S BEAUTIFUL HERO IMAGE AND CARD CONTAINER -->
+<!-- SOPHIE'S HERO IMAGE AND CARD CONTAINER -->
 <main role="main" class="main">
     <div class="container text-center">
         <p class="my-4 text-center lead text-muted intro">Browse, buy and sell <br/> pre-loved designer garments</p>
@@ -55,7 +36,7 @@
 </main>
 
 
-<!-- CONTAINER FOR LOGIN AND REGISTER FORMS; ONLY ONE SHOULD APPEAR AT A TIME, TRIGGERED BY CLICKING THE LOGIN OR REGISTER BUTTON -->
+<!-- CONTAINER FOR LOGIN AND REGISTER FORMS -->
 <section id="userForm" class="d-none">
     <div class="container my-3">
         <!-- LOGIN FORM CONTAINER -->
@@ -108,31 +89,31 @@
 <!-- INPUT FORM FOR UPLOADING A NEW ITEM TO THE DATABASE & GALLERY -->
 <form id="addItemForm" class="container my-3" enctype="multipart/form-data">
     <h2>Add a Listing</h2>
-    <!-- item name -->
+    <!-- ITEM NAME -->
     <div class="form-group">
         <label for="itemName">Item name</label>
         <input type="text" class="form-control" id="itemName" placeholder="Item name">
     </div>
 
-    <!-- item description -->
+    <!-- ITEM DESCRIPTION -->
     <div class="form-group mb-3">
         <label for="itemDescription">Description</label>
         <textarea type="text" class="form-control" id="itemDescription" placeholder="Item Description"></textarea>
     </div>
 
-    <!-- item price -->
+    <!-- ITEM PRICE -->
     <div class="form-group mb-3">
         <label for="itemPrice">Price</label>
         <input type="number" class="form-control" id="itemPrice" placeholder="Item Price"></input>
     </div>
 
-    <!-- item image -->
+    <!-- ITEM IMAGE -->
     <div class="custom-file mt-2 mb-3">
         <input type="file" class="custom-file-input" id="itemImage">
         <label class="custom-file-label" for="itemImage" id="itemImageLabel">Upload image</label>
     </div>
 
-    <!-- item condition -->
+    <!-- ITEM CONDITION -->
     <div class="form-check">
         <input class="form-check-input" type="radio" name="itemCondition" id="itemUsed" value="Used" checked>
         <label class="form-check-label" for="itemUsed">
